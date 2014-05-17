@@ -1,0 +1,3 @@
+This is PugiTMX, the library used in Disandria for TMX parsing.
+It is very lightweight, and has no dependencies other than pugixml,
+which is included. 
