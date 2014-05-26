@@ -2,7 +2,7 @@
 
 using namespace pugitmx;
 
-unsigned int Tileset::getFirstGid() const
+int Tileset::getFirstGid() const
 {
     return firstgid;
 }

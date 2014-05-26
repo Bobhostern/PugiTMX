@@ -33,9 +33,9 @@ struct TilePropertyKey {
 class Tileset
 {
 public:
-    Tileset() {};
+    Tileset() : firstgid(-1), name(""), tilewidth(0), tileheight(0) {};
     Tileset(uint fgd, std::string nme, uint tlwd, uint tlht, Image srcim) : firstgid(fgd), name(nme), tilewidth(tlwd), tileheight(tlht), image(srcim) {};
-    uint getFirstGid() const;
+    int getFirstGid() const;
     std::string getName() const;
     uint getTileWidth() const;
     uint getTileHeight() const;
@@ -43,7 +43,7 @@ public:
     void registerProperty(TilePropertyKey, std::string);
     std::string getProperty(TilePropertyKey) const;
 private:
-    uint firstgid;
+    int firstgid;
     std::string name;
     uint tilewidth;
     uint tileheight;
